@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    username: root
+    password: 
+    url: jdbc:mysql://127.0.0.1:3306/company_gpt?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+
+  data:
+    redis:
+      database: 1
+      host: 127.0.0.1
+      port: 6379
+      timeout: 10s
+
+auth:
+  model-name: gpt-4o
+  api-key: 
+  google-key: 
+  google-secret: 
+  web-url: http://https://localhost/:1002
+  redirect-url: http://https://localhost/:8100
+  chart-url: http://18.117.125.2:8000/birth_chart
+  limit: 30
+
