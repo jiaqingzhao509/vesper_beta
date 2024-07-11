@@ -1,0 +1,68 @@
+2024-07-02 17:17:53,715 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:18:47,214 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:20:10,344 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:20:23,080 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:26:15,721 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:28:40,622 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:29:09,523 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:29:33,253 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:29:45,105 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:34:25,086 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:35:25,272 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:35:28,515 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:37:10,859 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:38:54,705 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:40:04,843 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:40:47,727 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:41:18,369 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:51:51,037 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-02 17:53:50,678 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:02:21,437 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:02:37,454 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:02:46,873 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:03:05,388 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:03:54,392 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:04:40,402 [XNIO-1 task-3] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:04:55,773 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:05:03,219 [XNIO-1 task-3] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:06:12,914 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:06:14,660 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:17:21,266 [OkHttp https://api.anthropic.com/...] ERROR [d.l.service.AiServiceStreamingResponseHandler] AiServiceStreamingResponseHandler.java:104 - While handling the following error...
+dev.langchain4j.model.anthropic.internal.client.AnthropicHttpException: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"}}
+	at dev.langchain4j.model.anthropic.internal.client.DefaultAnthropicClient$1.onFailure(DefaultAnthropicClient.java:258)
+	at okhttp3.internal.sse.RealEventSource.processResponse(RealEventSource.kt:52)
+	at okhttp3.internal.sse.RealEventSource.onResponse(RealEventSource.kt:46)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:519)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-07-06 20:17:21,267 [OkHttp https://api.anthropic.com/...] ERROR [d.l.service.AiServiceStreamingResponseHandler] AiServiceStreamingResponseHandler.java:105 - ...the following error happened
+java.lang.RuntimeException: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"}}
+	at com.example.chat.ChatEndpoint.lambda$chat$3(ChatEndpoint.java:141)
+	at dev.langchain4j.service.AiServiceStreamingResponseHandler.onError(AiServiceStreamingResponseHandler.java:102)
+	at dev.langchain4j.model.anthropic.internal.client.DefaultAnthropicClient$1.onFailure(DefaultAnthropicClient.java:258)
+	at okhttp3.internal.sse.RealEventSource.processResponse(RealEventSource.kt:52)
+	at okhttp3.internal.sse.RealEventSource.onResponse(RealEventSource.kt:46)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:519)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-07-06 20:19:09,581 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:20:31,530 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 20:22:22,023 [XNIO-1 task-3] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 23:05:10,166 [XNIO-1 task-3] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-06 23:07:32,206 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 15:23:39,923 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 15:24:01,234 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 15:24:36,072 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 15:30:33,934 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 21:44:59,445 [XNIO-1 task-4] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 21:47:48,467 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 21:53:03,430 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 21:54:26,258 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 21:55:55,205 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 21:57:01,430 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 21:58:22,406 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 22:01:09,368 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-07 22:02:02,210 [XNIO-1 task-2] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------
+2024-07-11 18:19:00,490 [XNIO-1 task-3] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------

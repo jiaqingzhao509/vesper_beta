@@ -35,10 +35,12 @@
         }
         checkPlace(form.place)
           .then((res: any) => {
+            console.log('checkPlace response:', res)
             if (res == null) {
               message.error('Please check whether the geographical location entered is incorrect');
               return false;
             }
+            console.log('Latitude:', res.lat, 'Longitude:', res.lng);
             form.lat = res.lat;
             form.lng = res.lng;
             message.success('Data acquisition success');

@@ -20,8 +20,10 @@ import dev.langchain4j.memory.chat.ChatMemoryProvider;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.input.PromptTemplate;
-import dev.langchain4j.model.openai.OpenAiChatModel;
-import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
+import dev.langchain4j.model.anthropic.AnthropicChatModel;
+import dev.langchain4j.model.anthropic.AnthropicStreamingChatModel;
+//import dev.langchain4j.model.openai.OpenAiChatModel;
+//import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import dev.langchain4j.model.output.Response;
 import dev.langchain4j.model.output.TokenUsage;
 import dev.langchain4j.service.AiServices;
@@ -64,6 +66,7 @@ public class ChatEndpoint {
         if (userInfo == null || userInfo.getChatLimit() <= 0) {
             throw new RuntimeException("The number of conversations has exceeded three. Please upgrade the plan");
         }
+        logger.info("Request messages: {}", userInfo.getLat());
         if (StrUtil.isBlank(userInfo.getLat()) || StrUtil.isBlank(userInfo.getLng()) || StrUtil.isBlank(userInfo.getChart())) {
             throw new RuntimeException("Please complete your birthday date and location Settings first");
         }
@@ -83,11 +86,19 @@ public class ChatEndpoint {
         "date", getCurrentDate()
         )));
 
-        StreamingChatLanguageModel model = OpenAiStreamingChatModel.builder()
+        // StreamingChatLanguageModel model = OpenAiStreamingChatModel.builder()
+        //         .apiKey(props.getApiKey())
+        //         .modelName(props.getModelName())
+        //         .timeout(Duration.ofSeconds(600))
+        //         .build();
+
+        StreamingChatLanguageModel model = AnthropicStreamingChatModel.builder()
                 .apiKey(props.getApiKey())
-                .modelName(props.getModelName())
+                .modelName(props.getModelName()) // Use Claude model name here, e.g., "claude-2"
                 .timeout(Duration.ofSeconds(600))
                 .build();
+
+
         ChatMemoryProvider chatMemoryProvider = memoryId -> MessageWindowChatMemory.builder()
                 .id(userInfo.getId())
                 .maxMessages(10)
@@ -142,23 +153,26 @@ public class ChatEndpoint {
     @PostMapping("/auto-suggestion")
     public R autoSuggestion(@RequestBody ChatReq req) {
         req.setUserId(AuthUtil.getUserId());
-        //logger.info("Request messages: {}",  req.getUserId());
-        logger.info("Request messages: {}", req.getUserId());
-
         StreamEmitter emitter = new StreamEmitter();
         req.setEmitter(emitter);
         //logger.info("Request messages: {}", chatMemoryStore.getMessages(toString(req.getUserId())));
         req.setPrompt(new PromptTemplate(ChatConst.QUESTION_PROMPT).apply(Map.of("history", chatMemoryStore.getMessages(req.getUserId()))));
 
-        OpenAiChatModel chatModel = OpenAiChatModel.builder()
-                .apiKey(props.getApiKey())
-                .modelName(props.getModelName())
-                .responseFormat("json_object")
-                .timeout(Duration.ofSeconds(600))
-                .build();
+        // OpenAiChatModel chatModel = OpenAiChatModel.builder()
+        //         .apiKey(props.getApiKey())
+        //         .modelName(props.getModelName())
+        //         .responseFormat("json_object")
+        //         .timeout(Duration.ofSeconds(600))
+        //         .build();
+
+        AnthropicChatModel chatModel = AnthropicChatModel.builder()
+            .apiKey(props.getApiKey())
+            .modelName(props.getModelName())
+            .timeout(Duration.ofSeconds(600))
+            .build();
         Response<AiMessage> generate = chatModel.generate(req.getPrompt().toUserMessage());
+        logger.info("Request messages: {}", generate.content().text());
         ChatResJson res = JSON.parseObject(generate.content().text(), ChatResJson.class);
-        //return R.ok(res.getSimilar_questions());
         return R.ok(res.getFollow_up_questions());
     }
 

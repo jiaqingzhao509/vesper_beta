@@ -1,0 +1,71 @@
+{
+  "groups": [
+    {
+      "name": "auth",
+      "type": "com.example.common.props.AuthProps",
+      "sourceType": "com.example.common.props.AuthProps"
+    },
+    {
+      "name": "oss",
+      "type": "com.example.common.props.OssProps",
+      "sourceType": "com.example.common.props.OssProps"
+    }
+  ],
+  "properties": [
+    {
+      "name": "auth.api-key",
+      "type": "java.lang.String",
+      "sourceType": "com.example.common.props.AuthProps"
+    },
+    {
+      "name": "auth.chart-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.common.props.AuthProps"
+    },
+    {
+      "name": "auth.google-key",
+      "type": "java.lang.String",
+      "sourceType": "com.example.common.props.AuthProps"
+    },
+    {
+      "name": "auth.google-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.example.common.props.AuthProps"
+    },
+    {
+      "name": "auth.limit",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.common.props.AuthProps",
+      "defaultValue": 30
+    },
+    {
+      "name": "auth.model-name",
+      "type": "java.lang.String",
+      "sourceType": "com.example.common.props.AuthProps"
+    },
+    {
+      "name": "auth.redirect-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.common.props.AuthProps"
+    },
+    {
+      "name": "auth.web-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.common.props.AuthProps"
+    },
+    {
+      "name": "oss.remote-path",
+      "type": "java.lang.String",
+      "description": "文件访问地址",
+      "sourceType": "com.example.common.props.OssProps",
+      "defaultValue": "http:\/\/127.0.0.1:8090\/upload"
+    },
+    {
+      "name": "oss.upload-path",
+      "type": "java.lang.String",
+      "description": "文件上传地址",
+      "sourceType": "com.example.common.props.OssProps"
+    }
+  ],
+  "hints": []
+}

@@ -21,38 +21,81 @@
   const userStore = useUserStore();
   const router = useRouter();
 
+  // const rules = {
+  //   username: { required: true, message: 'Enter your email', trigger: 'blur' },
+  //   nickname: { required: true, message: 'Enter your nickname', trigger: 'blur' },
+  //   birthdate: { required: true, message: 'Enter your birthdate', trigger: 'blur' },
+  //   place: {
+  //     required: true,
+  //     message: 'Enter your birth place',
+  //     trigger: 'blur',
+  //     validator(rule: any, value: string) {
+  //       if (value === '') {
+  //         return false;
+  //       }
+  //       placeLoading.value = true;
+  //       checkPlace(form.value.place)
+  //         .then((res: any) => {
+  //           if (res == null) {
+  //             message.error('Please check whether the geographical location entered is incorrect');
+  //             return false;
+  //           }
+  //           form.value.lat = res.lat;
+  //           form.value.lng = res.lng;
+  //           message.success('Data acquisition success');
+  //           placeLoading.value = false;
+  //           return true;
+  //         })
+  //         .catch((err) => {
+  //           console.log('err', err);
+  //           return false;
+  //         });
+  //     },
+  //   },
+  // };
+
   const rules = {
-    username: { required: true, message: 'Enter your email', trigger: 'blur' },
-    nickname: { required: true, message: 'Enter your nickname', trigger: 'blur' },
-    birthdate: { required: true, message: 'Enter your birthdate', trigger: 'blur' },
-    place: {
-      required: true,
-      message: 'Enter your birth place',
-      trigger: 'blur',
-      validator(rule: any, value: string) {
-        if (value === '') {
-          return false;
-        }
-        placeLoading.value = true;
-        checkPlace(form.value.place)
-          .then((res: any) => {
-            if (res == null) {
-              message.error('Please check whether the geographical location entered is incorrect');
-              return false;
-            }
-            form.value.lat = res.lat;
-            form.value.lng = res.lng;
-            message.success('Data acquisition success');
-            placeLoading.value = false;
-            return true;
-          })
-          .catch((err) => {
-            console.log('err', err);
-            return false;
-          });
-      },
+  username: { required: true, message: 'Enter your email', trigger: 'blur' },
+  nickname: { required: true, message: 'Enter your nickname', trigger: 'blur' },
+  birthdate: { required: true, message: 'Enter your birthdate', trigger: 'blur' },
+  place: {
+    required: true,
+    message: 'Enter your birth place',
+    trigger: 'blur',
+    validator(rule: any, value: string) {
+      console.log('Validator function called', value);
+      if (value === '') {
+        return false;
+      }
+      placeLoading.value = true;
+      return checkPlace(form.value.place)
+        .then((res: any) => {
+          console.log('checkPlace response:', res);  // Log the entire response
+
+          if (res == null) {
+            console.log('Response is null, showing error message');
+            message.error('Please check whether the geographical location entered is incorrect');
+            return Promise.reject('Invalid location');
+          }
+
+          console.log('Latitude:', res.lat, 'Longitude:', res.lng);  // Log lat and lng
+          form.value.lat = res.lat;
+          form.value.lng = res.lng;
+          
+          console.log('Updated form values:', form.value);  // Log updated form values
+
+          message.success('Data acquisition success');
+          placeLoading.value = false;
+          return Promise.resolve();
+        })
+        .catch((err) => {
+          console.error('Error in checkPlace:', err);  // More detailed error logging
+          placeLoading.value = false;
+          return Promise.reject(err);
+        });
     },
-  };
+  },
+};
 
   async function handleSubmit() {
     loading.value = true;

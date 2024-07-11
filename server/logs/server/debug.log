@@ -1,0 +1,7 @@
+2024-07-11 18:18:59,541 [XNIO-1 task-3] INFO  [com.example.auth.endpoint.AuthEndpoint] AuthEndpoint.java:271 - 没有设置lat lng信息，主动获取一次
+2024-07-11 18:18:59,564 [XNIO-1 task-3] INFO  [com.example.auth.endpoint.AuthEndpoint] AuthEndpoint.java:274 - checkpoint 0
+2024-07-11 18:19:00,430 [XNIO-1 task-3] INFO  [com.example.auth.endpoint.AuthEndpoint] AuthEndpoint.java:276 - checkpoint 1
+2024-07-11 18:19:00,431 [XNIO-1 task-3] INFO  [com.example.auth.endpoint.AuthEndpoint] AuthEndpoint.java:278 - checkpoint 2: {lat=49.2433804, lng=-122.972545, location=Burnaby, 不列颠哥伦比亚省, 加拿大}
+2024-07-11 18:19:00,431 [XNIO-1 task-3] INFO  [com.example.auth.endpoint.AuthEndpoint] AuthEndpoint.java:280 - checkpoint 3 : {lat=49.2433804, lng=-122.972545, location=Burnaby, 不列颠哥伦比亚省, 加拿大}
+2024-07-11 18:19:00,432 [XNIO-1 task-3] INFO  [com.example.auth.endpoint.AuthEndpoint] AuthEndpoint.java:287 - checkpoint 4
+2024-07-11 18:19:00,490 [XNIO-1 task-3] ERROR [c.example.auth.service.GlobalExceptionTranslator] GlobalExceptionTranslator.java:39 - ----------服务器异常----------

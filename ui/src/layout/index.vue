@@ -14,9 +14,7 @@
     >
       <div class="w-full h-full max-w-screen-lg">
         <RouterView v-slot="{ Component, route }">
-          <keep-alive>
-            <component :is="Component" :key="route.fullPath" />
-          </keep-alive>
+          <component :is="Component" :key="route.fullPath" />
         </RouterView>
       </div>
     </div>

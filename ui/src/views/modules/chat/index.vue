@@ -23,9 +23,9 @@
   const aiChatId = ref<string>('');
   const inputRef = ref<Ref | null>(null);
   const suggestions = ref<any>([
-    "What is Aries' lucky number?",
-    'Which sign matches Leo best?',
-    "What are Gemini's traits?",
+    "What does the stars say about me?",
+    'Will I meet my true love soon?',
+    "What should I manifest today?",
   ]);
 
   onMounted(async () => {
